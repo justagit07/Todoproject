@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Nav from './nav'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -8,9 +8,6 @@ function App() {
   const [todo, settodo]=useState("")
   const [todos, settodos]=useState([])
   const [showfinished, setshowfinished]=useState(false)
-  const dataref= useRef
-  const editref=useRef
-  const [checked , setchecked]=useState(false)
   useEffect(()=>{
       let todo= JSON.parse(localStorage.getItem("todos"))
       settodos(todo)
